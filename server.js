@@ -42,6 +42,7 @@ const cors = require("cors");  // Import cors
 
 const app = express();
 // Enable CORS for all origins (or you can customize it to allow only specific origins)
+app.options('*', cors()); // respond to preflight
 app.use(cors()); 
 const PORT = process.env.PORT || 3001;
 
