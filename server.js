@@ -54,6 +54,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
 
+// app.use('/',(req,res) => {
+//   res.send("Backend is live")
+// })
 // Use the nutrition routes for nutrition data
 app.use("/api/nutrition", nutritionRoutes);  // This will route API calls to /api/nutrition
 
