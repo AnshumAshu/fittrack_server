@@ -40,10 +40,10 @@ const nutritionRoutes = require("./routes/api/nutrition");  // Import the nutrit
 const db = require("./config/connection");
 const cors = require("cors");  // Import cors
 
+const app = express();
 // Enable CORS for all origins (or you can customize it to allow only specific origins)
 app.use(cors()); 
 const PORT = process.env.PORT || 3001;
-const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
